@@ -1,0 +1,21 @@
+<mat-card *ngIf="detectedIssue" (click)="getDetectedIssue.emit(detectedIssue)" class="mat-elevation-z5" appOnHover>
+    <mat-card-header>
+      <mat-card-title>{{detectedIssue.id}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <img src="assets/images/issue-logo.png" alt="borito">
+      <p>{{detectedIssue.status}}</p>
+    </mat-card-content>
+    <mat-card-actions layout="row" layout-align="space-between center">
+        <button mat-mini-fab color="primary" (click)="openUpdateDialog(detectedIssue)" class="button-card-left">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-mini-fab color="secondary" (click)="openLookDialog(detectedIssue)" class="button-card-middle">
+          <mat-icon>visibility</mat-icon>
+      </button>
+        <button mat-mini-fab color="warn" (click)="deleteObject(detectedIssue.id)" class="button-card-right">
+            <mat-icon>delete</mat-icon>
+        </button>
+
+    </mat-card-actions>
+</mat-card>

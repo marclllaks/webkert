@@ -1,0 +1,43 @@
+<form [formGroup]="form">
+    <h3>Adat felvétele</h3>
+    <mat-form-field class="max-width">
+      <mat-label>Státusz</mat-label>
+      <input matInput focus formControlName="status">
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Kód</mat-label>
+    <input matInput focus formControlName="code">
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Severity</mat-label>
+    <input matInput focus formControlName="severity">
+  </mat-form-field> 
+  <mat-form-field class="max-width">
+    <mat-label>Patient</mat-label>
+    <input matInput focus formControlName="patient">
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Author</mat-label>
+    <input matInput focus formControlName="author">
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Implicated</mat-label>
+    <input matInput focus formControlName="implicated">
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Evidence</mat-label>
+    <input matInput focus formControlName="evidence">
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Detail</mat-label>
+    <input matInput focus formControlName="detail">
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Reference</mat-label>
+    <input matInput focus formControlName="reference">
+  </mat-form-field>
+    <div style="display: flex; justify-content: flex-end;">
+      <button mat-button (click)="dialogRef.close()" class="margin-right">MÉGSEM</button>
+      <button mat-button [mat-dialog-close]="form.value" [disabled]="form.invalid">FELVÉTEL</button>
+    </div>
+  </form>
